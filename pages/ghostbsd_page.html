@@ -1,81 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ghostbsd</title>
-    <link rel="icon" href="../images/ghostbsd.png">
-    <link rel="stylesheet" href="ghostbsd.css">
-    <script src = "../js/fade_page.js"></script>
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <h1>GhostBSD</h1>
-            <p>FreeBSD derivative for "beginners"</p>
-            <nav class="nav">
-                <a href="rust.html"><img src="../images/previous_page.png" alt="Previous Page" class="nav-icon"></a>
-                <a href="../index.html"><img src="../images/home_image.png" alt="Home" class="nav-icon"></a>
-            </nav>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ghostbsd</title>
+        <link rel="icon" href="../images/ghostbsd.png">
+        <link rel="stylesheet" href="../pages/CSS/ghostbsd.css">
+        <script src = "../js/fade_page.js"></script>
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <header class="header">
+            <div class="container">
+                <h1>GhostBSD</h1>
+                <p> <i>FreeBSD derivative for "beginners" </i></p>
+                <nav class="nav">
+                    <a href="rust.html"><img src="../images/previous_page.png" alt="Previous Page" class="nav-icon"></a>
+                    <a href="../index.html"><img src="../images/home_image.png" alt="Home" class="nav-icon"></a>
+                </nav>
+            </div>
+            </header>
+            
+            <section class="blog-section">
+                <div class = "inner-box">
+                <h2>What is a "BSD"?</h2>
+                <h4>
+                    BSD, or Berkeley Software Distribution, is a now defunct operating system that was built on C and was a part of the Unix family (which would later offshot to modern-day Linux in the 90s). Many derivatives of this OS have popped up since its demise, including FreeBSD and OpenBSD, both of which are the "main" OSs that the remaining OSs are built off of.
+
+                </h4>
+                </div>
+            </section>
+
+            <section class="blog-section">
+                <div class = "inner-box">
+                <h2>Why GhostBSD?</h2>
+                <h4>
+                    Simple: it comes installed with "xfce", which is a GUI that most BSD derivatives do not have to boot. FreeBSD alone is GUI-less and you are stuck with a shell prompt to start, compared to Linux. Which brings me to the reason why I'm NOT interested in Linux...
+
+                   <br> While I am interested in understanding OSs closer to the kernel, Linux is a derivative the tries to make things more "user-friendly" rather than embracing what made Unix, well, Unix. Not to mention the instability of entirely open-sourced projects (not to say open-sourced projects are entirely bad). That, and due to most programs not even supporting FreeBSD/Unix, I will be forced to find programs that work and get creative with the bootstrapping/package installing processes.
+
+                   <br> My goal isn't to make BSD more favorable or less favorable, it's just to experience firsthand something that is more restricted/locked down. You are welcome to see my progress in this tedious yet thrilling task.
+                </h4>
+                </div>
+            </section>
+
+            <section class="blog-section">
+                 <div class = "inner-box">
+                <h2>Running GhostBSD on a VM (Oracle VM)</h2>
+                <h4>
+                    Booting it up initially I had no issues; nothing wrong with the keyboard or any silly driver errors. I managed to set up my custom xface environment with a screensaver and all. However, rather than saving the state like VM users recommend, I just shut down the machine like a regular computer or just kept it idle in the background of my PC for days on end.
+
+                    <br> Unfortunately, this led to an issue where the machine couldn't boot after my PC crashed. The root was misplaced probably due to how it shutdown immediately, so even with my best attempts, I just had to reinstall the ISO and the OS as a whole. Learning my lessons now could seriously save me if my OS on my laptop goes haywire.
+
+                    <br>That aside, I am still trying to understand packets and various other things that can be installed on this more closed-off OS.
+                </h4>
+                </div>
+            </section>
+
+            <section class="blog-section">
+                 <div class = "inner-box">
+                <h2>Getting it set up... on a ROG Strix G512LI</h2>
+                <h4>
+                    JAN 25 2025
+                    It has been a geniune hassle to get GhostBSD booted up on my former gaming machine. Due to incompability issues (including the keyboard not working and driver errors), I've had to troubleshoot and debug for several days (starting on 01/18/2025). Hopefully, I can get this machine started and begin my BSD adventure.
+                </h4>
+                <hr>
+                <h4>
+                    FEB 07 2025
+                    It's been a few weeks at this point, but I finally got my hands on a new USB in where I will be installing FreeBSD to debug my machine rather than having to deal with my keyboard not working and whatever. It will take extra time to fix this, but I am really headstrong about this. I <i>will</i> figure this out.
+                </h4>
+                <hr>
+                <h4>
+                    FEB 08 2025
+                    Tried installing FreeBSD on the USB to the new USB; I gave up on that half-way through and just installed it on the USB that contained the ISO. It almost stalled during partitioning but it didn't, thankfully. However, it seems the school's internet refuses to work with FreeBSD (as it requires a password and all), so it can't connect properly to install the packets necessary. As a result, I've semi-stalled this installation until I can figure out the correct URLs and whatnot to use for the installation. Annoying, but this is a part of the process.
+                </h4>
+                </div>
+            </section>
         </div>
-    </header>
-
-    <div class="main-wrapper">
-        <section class="blog-section">
-            <img src = "../images/bsd.png" alt= "BSD Logo">
-            <h2>What is a "BSD"?</h2>
-            <h4>
-                BSD, or Berkeley Software Distribution, is a now defunct operating system that was built on C and was a part of the Unix family (which would later offshot to modern-day Linux in the 90s). Many derivatives of this OS have popped up since its demise, including FreeBSD and OpenBSD, both of which are the "main" OSs that the remaining OSs are built off of.
-                
-            </h4>
-        </section>
-
-        <section class="blog-section">
-            <img src = "../images/ghostbsd.png" alt ="GhostBSD">
-            <h2>Why GhostBSD?</h2>
-            <h4>
-                Simple: it comes installed with <a href = "https://www.xfce.org"/>"xfce"</a>, which is a GUI that most BSD derivatives do not have to boot. FreeBSD alone is GUI-less and you are stuck with a shell prompt to start, compared to Linux. Which brings me to the reason why I'm NOT interested in Linux...
-                
-               <br> While I am interested in understanding OSs closer to the kernel, Linux is a derivative the tries to make things more "user-friendly" rather than embracing what made Unix, well, Unix. Not to mention the instability of entirely open-sourced projects (not to say open-sourced projects are entirely bad). That, and due to most programs not even supporting FreeBSD/Unix, I will be forced to find programs that work and get creative with the bootstrapping/package installing processes.
-
-               <br> My goal isn't to make BSD more favorable or less favorable, it's just to experience firsthand something that is more restricted/locked down. You are welcome to see my progress in this tedious yet thrilling task.
-            </h4>
-        </section>
-    
-        <section class="blog-section">
-            <img src = "../images/vm.png" alt ="Oracle VM">
-            <h2>Running GhostBSD on a VM (Oracle VM)</h2>
-            <h4>
-                Booting it up initially I had no issues; nothing wrong with the keyboard or any silly driver errors. I managed to set up my custom xface environment with a screensaver and all. However, rather than saving the state like VM users recommend, I just shut down the machine like a regular computer or just kept it idle in the background of my PC for days on end.
-                
-                <br> Unfortunately, this led to an issue where the machine couldn't boot after my PC crashed. The root was misplaced probably due to how it shutdown immediately, so even with my best attempts, I just had to reinstall the ISO and the OS as a whole. Learning my lessons now could seriously save me if my OS on my laptop goes haywire.
-
-                <br>That aside, I am still trying to understand packets and various other things that can be installed on this more closed-off OS.
-            </h4>
-        </section>
-
-        <section class="blog-section">
-            <img src = "../images/rog_strix.png" alt="ROG Strix">
-            <h2>Getting it set up... on a ROG Strix G512LI</h2>
-            <h4>
-                <p>JAN 25 2025</p>
-                It has been a geniune hassle to get GhostBSD booted up on my former gaming machine. Due to incompability issues (including the keyboard not working and driver errors), I've had to troubleshoot and debug for several days (starting on 01/18/2025). Hopefully, I can get this machine started and begin my BSD adventure.
-            </h4>
-            <hr>
-            <h4>
-                <p>FEB 07 2025</p>
-                It's been a few weeks at this point, but I finally got my hands on a new USB in where I will be installing FreeBSD to debug my machine rather than having to deal with my keyboard not working and whatever. It will take extra time to fix this, but I am really headstrong about this. I <i>will</i> figure this out.
-            </h4>
-            <hr>
-            <h4>
-                <p>FEB 08 2025</p>
-                Tried installing FreeBSD on the USB to the new USB; I gave up on that half-way through and just installed it on the USB that contained the ISO. It almost stalled during partitioning but it didn't, thankfully. However, it seems the school's internet refuses to work with FreeBSD (as it requires a password and all), so it can't connect properly to install the packets necessary. As a result, I've semi-stalled this installation until I can figure out the correct URLs and whatnot to use for the installation. Annoying, but this is a part of the process.
-            </h4>
-        </section>
-    </div>
-
-    <footer class="footer">
-        <p>something here, i guess</p>
-    </footer>
-</body>
-</html>
+    </body>
+    </html>

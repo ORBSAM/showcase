@@ -1,0 +1,213 @@
+/* universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* galaxy-like background */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: radial-gradient(circle, #000010, #000005, #000);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* stars effect (same as first page) */
+.space-background {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, #000010, #000005, #000);
+    z-index: -1;
+}
+
+#stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* header styling */
+.header {
+    text-align: center;
+    padding: 2vh;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    box-shadow: 0 0 12px rgba(64, 190, 242, 0.4), 0 0 18px rgba(41, 54, 157, 0.3); /* Subtle glow */
+}
+
+/* center hwader content */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* navigation Icons */
+.nav {
+    display: flex;
+    gap: 15px; /* Adds spacing between icons */
+    margin-top: 10px; /* Adds space below the title */
+}
+
+.nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.nav-icon {
+    width: 1.5vw; /* adjust size as needed */
+    height: auto;
+} 
+
+
+/* blog container styling */
+.main-wrapper {
+    width: 80%;
+   /* max-width: 1200px; */
+    margin: 50px auto;
+    padding: 40px; /* Increased padding */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ensures title and nav are centered */
+}
+
+/* blog Sections */
+.blog-section {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    line-height: 2.0;
+    margin-bottom: 35px; /* Increased spacing between sections */
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* */
+.inner-box {
+    background: rgba(255, 255, 255, 0.1); /* slightly lighter than the section */
+    padding: 1.5vw;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 95%;
+    margin: 3vh auto;
+}
+
+.blog-section:hover {
+    transform: translateY(-5px);
+}
+
+.blog-section h2 {
+    color: #ddd;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.blog-section h4 {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+/* blog section images */
+.blog-section img {
+    display: block;
+    max-width: 100%; 
+    height: auto;
+    max-height: 250px; 
+    margin: 0 auto 15px auto; 
+    border-radius: 8px; 
+}
+
+/* the special header */
+hr{
+  display: block;
+  max-width: fit-content;
+  width: 95%x;
+  min-width: 90%;
+  margin: 30px auto; 
+  border: 5px solid #277c90;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #2f91a8;
+  padding: 0;
+  animation: glow 1.5s ease-in-out infinite;
+  -webkit-animation: glow 1.5s ease-in-out infinite;
+}
+
+hr::before {
+  content: '';
+  display: block;
+  width: 290px;
+  margin: 10px auto; 
+  border-radius: 2px;
+  box-shadow: 0 0 3px black;
+  animation: glowMinor 2s ease-in-out infinite;
+  -webkit-animation: glowMinor 2s ease-in-out infinite 
+}
+
+
+/* footer styling */
+.footer {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+
+@keyframes glow {
+  0%{box-shadow: 0 0 2px #2f91a8;}
+  50%{box-shadow: 0 0 8px #2f91a8;}
+  100%{box-shadow: 0 0 2px #2f91a8;}
+}
+
+@-webkit-keyframes glow {
+  0%{box-shadow: 0 0 2px #2f91a8;}
+  50%{box-shadow: 0 0 8px #2f91a8;}
+  100%{box-shadow: 0 0 2px #2f91a8;}
+}
+
+@keyframes glowMinor {
+  0%{box-shadow: 0 0 2px black;}
+  50%{box-shadow: 0 0 8px black;}
+  100%{box-shadow: 0 0 2px black;}
+}
+
+@-webkit-keyframes glowMinor {
+  0%{box-shadow: 0 0 2px black;}
+  50%{box-shadow: 0 0 8px black;}
+  100%{box-shadow: 0 0 2px black;}
+}
+
+/* hover effect for the blog sections */
+.section:hover, .blog-section:hover {
+    box-shadow: 0 6px 20px rgba(66, 145, 253, 0.26);
+    transition: box-shadow 0.3s;
+    animation: floating 2s infinite ease-in-out;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+}

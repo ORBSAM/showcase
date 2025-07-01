@@ -1,0 +1,253 @@
+/* Universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Galaxy-like background */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: radial-gradient(circle, #000010, #000005, #000);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Stars effect */
+.space-background {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, #000010, #000005, #000);
+    z-index: -1;
+}
+
+#stars {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Keeps stars in the background */
+    overflow: hidden;
+}
+
+.stars, .stars::before, .stars::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow:
+        100px 200px white, 300px 400px white, 500px 150px white, 700px 300px white,
+        900px 250px white, 1100px 100px white, 1300px 350px white, 1500px 450px white,
+        200px 600px white, 800px 700px white, 1200px 800px white, 1400px 900px white,
+        1600px 300px white, 1800px 500px white, 2000px 700px white, 2200px 900px white,
+        400px 1200px white, 600px 1300px white, 1000px 1100px white, 1700px 1400px white,
+        900px 1600px white, 1200px 1700px white, 1500px 1800px white, 2000px 1900px white;
+}
+
+.stars::before {
+    transform: scale(1.5); /* Larger stars for variety */
+    opacity: 0.8;
+    box-shadow:
+        50px 150px white, 250px 350px white, 450px 50px white, 650px 500px white,
+        850px 200px white, 1050px 600px white, 1250px 150px white, 1450px 400px white,
+        300px 750px white, 700px 850px white, 1100px 950px white, 1300px 1050px white,
+        1700px 550px white, 1900px 750px white, 2100px 950px white, 2300px 1150px white,
+        400px 1350px white, 600px 1450px white, 1000px 1550px white, 1700px 1650px white,
+        200px 1750px white, 500px 1850px white, 900px 1950px white, 1400px 2050px white;
+}
+
+.stars::after {
+    transform: scale(0.8); /* Smaller stars for depth */
+    opacity: 0.6;
+    box-shadow:
+        75px 250px white, 275px 450px white, 475px 100px white, 675px 550px white,
+        875px 250px white, 1075px 700px white, 1275px 200px white, 1475px 500px white,
+        350px 850px white, 750px 950px white, 1150px 1050px white, 1350px 1150px white,
+        1750px 650px white, 1950px 850px white, 2150px 1050px white, 2350px 1250px white,
+        450px 1350px white, 850px 1450px white, 1250px 1550px white, 1650px 1650px white,
+        350px 1750px white, 750px 1850px white, 1150px 1950px white, 1550px 2050px white;
+}
+
+
+/* main wrapper */
+.main-wrapper {
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+/* header */
+.header {
+    text-align: center;
+    padding: 2vh;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    box-shadow: 0 0 12px rgba(64, 190, 242, 0.4), 0 0 18px rgba(41, 54, 157, 0.3);
+}
+
+/* container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* nav icons */
+.nav {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.nav-icon {
+    width: 1.5vw;
+    height: auto;
+}
+
+/* blog sections */
+.blog-section {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    margin-bottom: 35px;
+    padding: 1.9vw;
+    line-height: 1.5;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.inner-box {
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 2vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 95%;
+    margin: 3vh auto;
+}
+
+.inner-box ul{
+    margin-left: 2.5vw;
+}
+
+.blog-section:hover {
+    transform: translateY(-5px);
+}
+
+.blog-section h2 {
+    color: #ddd;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.blog-section h4 {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+/* the code snippets */
+.code-snippet {
+    background: #2d2d2d;
+    color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+pre {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+}
+
+hr {
+  display: block;
+  width: 95%x;
+  min-width: 90%;
+  margin: 30px auto; /* centers it horizontally */
+  border: 5px solid #277c90;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #2f91a8;
+  padding: 0;
+  animation: glow 1.5s ease-in-out infinite;
+  -webkit-animation: glow 1.5s ease-in-out infinite;
+}
+
+hr::before {
+  content: '';
+  display: block;
+  width: 290px;
+/*  height: 2px; */
+ /*  background: #222; */
+  margin: 10px auto; 
+  border-radius: 2px;
+  box-shadow: 0 0 3px black;
+  animation: glowMinor 2s ease-in-out infinite;
+  -webkit-animation: glowMinor 2s ease-in-out infinite 
+}
+
+.footer {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+
+@keyframes glow {
+  0%{box-shadow: 0 0 2px #2f91a8;}
+  50%{box-shadow: 0 0 8px #2f91a8;}
+  100%{box-shadow: 0 0 2px #2f91a8;}
+}
+
+@-webkit-keyframes glow {
+  0%{box-shadow: 0 0 2px #2f91a8;}
+  50%{box-shadow: 0 0 8px #2f91a8;}
+  100%{box-shadow: 0 0 2px #2f91a8;}
+}
+
+@keyframes glowMinor {
+  0%{box-shadow: 0 0 2px black;}
+  50%{box-shadow: 0 0 8px black;}
+  100%{box-shadow: 0 0 2px black;}
+}
+
+@-webkit-keyframes glowMinor {
+  0%{box-shadow: 0 0 2px black;}
+  50%{box-shadow: 0 0 8px black;}
+  100%{box-shadow: 0 0 2px black;}
+}
+
+/* hover effect for the blog sections */
+.section:hover, .blog-section:hover {
+    box-shadow: 0 6px 20px rgba(66, 145, 253, 0.26);
+    transition: box-shadow 0.3s;
+    animation: floating 2s infinite ease-in-out;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0px); }
+}

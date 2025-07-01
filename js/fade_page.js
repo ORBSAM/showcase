@@ -22,5 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // Initial check
+    revealOnScroll(); //reveal on scroll; make sure that it's within bounds
 });
+

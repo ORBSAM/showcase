@@ -1,0 +1,264 @@
+/* reset some default browser styles */
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: radial-gradient(circle, #000010, #000005, #000);
+    color: white;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+
+.space-background {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, #000010, #000005, #000);
+    z-index: -1;
+}
+
+#stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#stars {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Keeps stars in the background */
+    overflow: hidden;
+}
+
+.stars, .stars::before, .stars::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow:
+        100px 200px white, 300px 400px white, 500px 150px white, 700px 300px white,
+        900px 250px white, 1100px 100px white, 1300px 350px white, 1500px 450px white,
+        200px 600px white, 800px 700px white, 1200px 800px white, 1400px 900px white,
+        1600px 300px white, 1800px 500px white, 2000px 700px white, 2200px 900px white,
+        400px 1200px white, 600px 1300px white, 1000px 1100px white, 1700px 1400px white,
+        900px 1600px white, 1200px 1700px white, 1500px 1800px white, 2000px 1900px white;
+}
+
+.stars::before {
+    transform: scale(1.5); /* Larger stars for variety */
+    opacity: 0.8;
+    box-shadow:
+        50px 150px white, 250px 350px white, 450px 50px white, 650px 500px white,
+        850px 200px white, 1050px 600px white, 1250px 150px white, 1450px 400px white,
+        300px 750px white, 700px 850px white, 1100px 950px white, 1300px 1050px white,
+        1700px 550px white, 1900px 750px white, 2100px 950px white, 2300px 1150px white,
+        400px 1350px white, 600px 1450px white, 1000px 1550px white, 1700px 1650px white,
+        200px 1750px white, 500px 1850px white, 900px 1950px white, 1400px 2050px white;
+}
+
+.stars::after {
+    transform: scale(0.8); /* Smaller stars for depth */
+    opacity: 0.6;
+    box-shadow:
+        75px 250px white, 275px 450px white, 475px 100px white, 675px 550px white,
+        875px 250px white, 1075px 700px white, 1275px 200px white, 1475px 500px white,
+        350px 850px white, 750px 950px white, 1150px 1050px white, 1350px 1150px white,
+        1750px 650px white, 1950px 850px white, 2150px 1050px white, 2350px 1250px white,
+        450px 1350px white, 850px 1450px white, 1250px 1550px white, 1650px 1650px white,
+        350px 1750px white, 750px 1850px white, 1150px 1950px white, 1550px 2050px white;
+}
+
+
+.main-wrapper {
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+/* images in the corner */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: url('../images/tea_leaf.png') no-repeat;
+    background-size: contain;
+}
+
+/* header w/ new gradient */
+.header {
+    text-align: center;
+    padding: 2vh;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    box-shadow: 0 0 12px rgba(142, 252, 163, 0.4), 0 0 18px rgba(76, 255, 117, 0.3);
+}
+
+.header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.header p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #d8d8d8;
+    margin-top: 5px;
+}
+
+/* nav icons */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.nav a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.nav-icon {
+    width: 24px;
+    height: auto;
+}
+
+/*container for the overall page content*/
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* layout for the sticky notes */
+.sticky-note-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.sticky-note {
+    width: 75%;
+    height: 250px;
+    background-color: rgba(206, 226, 179, 0.6); /* sticky note's background color */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    transition: width 0.5s ease, height 0.5s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+
+.sticky-note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.sticky-note h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.sticky-note h3 {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.sticky-note h5 {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.sticky-note .post-summary {
+    color: #555;
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+
+.sticky-note.expanded {
+    width: 90%;
+    height: auto;
+    z-index: 10;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.sticky-note .post-summary {
+    color: #555;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.footer {
+    background: #303b29;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* divider for the months */
+.month-divider {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    background-color: #495c3f;
+    color: white;
+    padding: 10px 0;
+    margin: 30px 0;
+    border-radius: 5px;
+    box-shadow: 2px 4px 8px rgba(11, 46, 18, 0.3);
+    opacity: 1;
+    transition: opacity 1.8s ease, transform 1.8s ease;
+}
+
+
+/* make sure it fits! */
+@media (max-width: 768px) {
+    .sticky-note-container {
+        grid-template-columns: 1fr; /* just a single column on smaller screens */
+    }
+}
+

@@ -4,7 +4,7 @@ const galaxyContainer = document.getElementById('galaxies');
 const quoteDisplay = document.getElementById('quote-display');
 const planetContainer = document.querySelector('.celestial-bodies');
 
-
+//the random quotes
 const quotes = [
     "The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty. - Winston Churchill",
     "If anything can go wrong, it will. - Murphy's Law",
@@ -85,6 +85,7 @@ function getRandomColor() {
     return colors[randomIndex];
 }
 
+//for each image...
 function wrapFloatingImages() {
     images.forEach((image) => {
         const wrapper = document.createElement('div');
@@ -168,7 +169,7 @@ function createGalaxy() {
     galaxyContainer.appendChild(galaxy);
 }
 
-//fisplay a random quote with this; generate a random index based on the length of the quotes constant list above
+//display a random quote with this; generate a random index based on the length of the quotes constant list above
 function displayRandomQuote() {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     quoteDisplay.textContent = quotes[randomIndex];

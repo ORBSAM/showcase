@@ -27,7 +27,7 @@
     z-index: 3; 
 }
 
-/* Stars */
+/* stars */
 #stars {
     position: absolute;
     top: 0;
@@ -93,7 +93,6 @@
     margin-top: 0; 
     color: white;
 }
-
 
 
 .floating-images a img {
@@ -170,10 +169,10 @@
 
 @keyframes floatLargeGalaxy {
     0%, 100% {
-        transform: translate(-50%, -50%) scale(1); /* Centered, original size */
+        transform: translate(-50%, -50%) scale(1); /*centered, original size */
     }
     50% {
-        transform: translate(-50%, -50%) scale(1.1); /* Slightly larger */
+        transform: translate(-50%, -50%) scale(1.1); /*slightly larger */
     }
 }
 
