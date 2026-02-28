@@ -254,6 +254,81 @@ body::before {
     transition: opacity 1.8s ease, transform 1.8s ease;
 }
 
+/* make the month divider clickable */
+.month-divider.clickable {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* collapsed by default */
+.month-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+/* expanded state */
+.month-dropdown.open .month-content {
+    max-height: 5000px; /* large enough for all notes */
+    opacity: 1;
+}
+
+/* subtle indicator */
+.month-divider::after {
+    content: "  ▼";
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* rotate arrow when open */
+.month-dropdown.open .month-divider::after {
+    content: "  ▲";
+}
+
+/*yearly divider*/
+.year-divider {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.18);
+    color: #eaffea;
+    padding: 15px 0;
+    margin: 40px 0 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 18px rgba(142, 252, 163, 0.35);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    user-select: none;
+}
+
+/*year collapse */
+.year-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 1s ease, opacity 0.6s ease;
+}
+
+/*open for the year */
+.year-dropdown.open .year-content {
+    max-height: 20000px;
+    opacity: 1;
+}
+
+/* arrow indicator */
+.year-divider::after {
+    content: "  ▼";
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.year-dropdown.open .year-divider::after {
+    content: "  ▲";
+}
+
 
 /* make sure it fits! */
 @media (max-width: 768px) {

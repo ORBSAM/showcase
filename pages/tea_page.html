@@ -1,264 +1,577 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>what's the tea, sis?</title>
-    <link rel="icon" href="../images/tea_leaf.png">
-    <link rel="stylesheet" href="../pages/CSS/tea.css">
-    <script src="../js/tea.js"></script>
-</head>
-<body>
-    <main class="main-wrapper">
-        <header class="header">
-        <div class="container">
-            <h1>daily tea thoughts</h1>
-            <p><i>Tea is the elixir of life.</i> <br>- Lao Tzu</p>
-            <nav class="nav">
-                <!-- was question page... keep it -->
-                <a href="question_page.html"><img src= "../images/previous_page.png" alt="prev page" class="nav-icon"></a>
-                <a href="../index.html"><img src="../images/home_image.png" alt="return to the shelves" class="nav-icon"></a>
-                <!-- was php... now under construction <a href="under_construction.html"><img src= "../images/next_page.png" alt="next page" class="nav-icon"></a> -->
-            </nav>
-        </div>
-        </header>
-        <div class="container">
-            <div class="month-divider">JAN 2025</div>
-            <div class="sticky-note-container">
-                <div class="sticky-note" onclick = "expandPost(this)">
-                    <h2>What is this?</h2>
-                    <p class="post-summary">This is just random tea documentation notes. I'm really into tea so all I do is write about the tea I've had that day and figure out which is the best way to brew it. I also review the tea sometimes (on a scale from 0-10), and determine if certain brewing times are "better" than others. Sometimes, I might neglect to care, and others I won't, it's entirely dependent on how I feel. And as something extra, I will include links to the websites that host the teas I have.</p>
+<!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>what's the tea, sis?</title>
+        <link rel="icon" href="../images/tea_leaf.png" />
+        <link rel="stylesheet" href="../pages/CSS/tea.css" />
+        <script src="../js/tea.js"></script>
+    </head>
+    <body>
+        <main class="main-wrapper">
+            <header class="header">
+                <div class="container">
+                    <h1 style="text-decoration:" line-through;>daily tea thoughts</h1>
+                    <p><i>Tea is the elixir of life.</i> <br />- Lao Tzu</p>
+                    <nav class="nav">
+                        <!-- was question page... keep it -->
+                        <a href="question_page.html"
+                            ><img src="../images/previous_page.png" alt="prev page" class="nav-icon"
+                        /></a>
+                        <a href="../index.html"
+                            ><img src="../images/home_image.png" alt="return to the shelves" class="nav-icon"
+                        /></a>
+                        <!-- was php... now under construction <a href="under_construction.html"><img src= "../images/next_page.png" alt="next page" class="nav-icon"></a> -->
+                    </nav>
                 </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://twiningsusa.com/products/prince-of-wales"> The Prince of Wales (Twinings)</a> </h2>
-                    <h3>JAN 09 2025</h3>
-                    <h5>Rating: 7</h5>
-                    <p class="post-summary">Had the PoW today. I kept steeping it, didn't bother to take it out. I prefer things bitter, but I can remove it at the 3-minute mark next time.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://www.stashtea.com/products/jasmine-blossom-green-tea-bagged"> Jasmine Tea (STASH) </a> </h2>
-                    <h3>JAN 10 2025</h3>
-                    <h5>Rating: 5</h5>
-                    <p class="post-summary">Tried the Jasmine Tea at some Thai fusion joint. I wasn't familiar with the brand but seeing their website, they seem to know what they're doing. Personally, I think there was something missing, but then again I have a strong preference for green tea w/ roasted brown rices, so that might just be that. Again, I just let it steep as I usually do, so I didn't know if there was a specific timer for it.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://twiningsusa.com/products/prince-of-wales"> The Prince of Wales (Twinings) </a></h2>
-                    <h3>JAN 10 2025</h3>
-                    <h5>Rating: 5</h5>
-                    <p class="post-summary">Had the PoW again. And like the last blog about the POW, I decided to steep it in for 3 minutes. It didn't have much flavor, so I only drank it for a few sips and put the bag back in. Tasted much better after I left it in there for a long time.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://itoen.com/products/oi-ocha-genmai-tea-bags"> Matcha Genmaicha Tea (Ito En) </a></h2>
-                    <h3>JAN 11 2025</h3>
-                    <h5>Rating: 8</h5>
-                    <p class="post-summary">Had my favorite type of tea today. Nice mellow taste and I enjoy it overall. But since I was so busy coding this site, I completely forgot I had it... so it's now cold as I type this. But before it was cold, I made sure to enjoy more than a few sips. And like usual, I just kept the bag in there like they usually do at Japanese restuarants.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: Green Tea (Lipton)</h2>
-                    <h3>JAN 11 2025</h3>
-                    <h5>Rating: 4</h5>
-                    <p class="post-summary">Going to a Korean BBQ restaraunt, I had high expectations for tea, but I was semi-disappointed when I got generic green tea... the ones you see at hotels. I don't necessarily hate Lipton, but it's not my, cup of tea. Since I don't usually have Lipton, I don't really care to footnote the steeping time.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://shop.wegmans.com/product/42807"> Oolong Tea (Wegmans) </a> </h2>
-                    <h3>JAN 12 2025</h3>
-                    <h5>Rating: 5</h5>
-                    <p class="post-summary">I have a serious bias towards oolong tea, but honestly the cheap kind isn't all that good. I've been having this Wegman's branded Oolong for a bit and honestly it's not bad bad, but not the best oolong I've had. I kept it steeped in, but since I ran out of this specific tea, I will have to hold on steeping it for however long I choose to steep it for. Otherwise, I'm not sure if I'll be able to have tea tomorrow since school is resuming, but I will try and have black tea for my morning drink during work.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://www.akbar.com/products/classic-earl-grey/">Earl Grey (Akbar)</a></h2>
-                    <h3>JAN 13 2025</h3>
-                    <h5>Rating: 6</h5>
-                    <p class="post-summary">As promised the day before, I'd make sure to have a cup of tea, or something in that nature. I had brought a ton of these back from home and decided to brew them at work
-                    inside of my thermos container. Because I didn't want to waste too much time, I didn't time the brewing or whatever, I just put the bag in and let it sit. As I type this, my cup is still filled with pipping hot tea water, and I can't wait to have it throughout the day.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: Brown Rice Green Tea (SanGrime)</h2>
-                    <h3>JAN 14 2025</h3>
-                    <h5>Rating: 7</h5>
-                    <p class="post-summary">Bought this months back and I've had it multiple times. But since my time was crunched, I haven't had the chance to actually have the tea yet, until now. Before, I've always made sure that I got pipping hot water in my thermos and drank it, because I found the rice teas did better just by sitting in the cup. So, obviously a good experience and is usually better than genmaicha tea, this tea's Japanese counterpart. Would recommend.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: Oolong Tea (Dynasty)</h2>
-                    <h3>JAN 15 2025</h3>
-                    <h5>Rating: 5.8</h5>
-                    <p class="post-summary">Had some Oolong tea the other day from a company I just happened to find in the store. The tea's, okay. And as per usual, I just steep it in the hot water I get from work. There's nothing too special about it, but it's better than the tea from Wegmans. Would recommend if you happen to find it in-store and or online. I cannot find the company's website so your best bet is on Amazon or another online shop not related to them.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://shop.wegmans.com/product/40092/wegmans-just-tea-black">Black Tea (Wegmans)</a></h2>
-                    <h3>JAN 16 2025</h3>
-                    <h5>Rating: 5.5</h5>
-                    <p class="post-summary">Honestly not the best black tea I've had but it's very refreshing. If you steep it for a very long time, it's super refreshing but it just doesn't have the flavor palette I like. If you want cheap and okay-ish black tea, this stuff's good.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://makemineabuilders.com/product/80-pack/"> English Breakfast  Tea (Make Mine a Builders)</a></h2>
-                    <h3>JAN 17 2025</h3>
-                    <h5>Rating: 7</h5>
-                    <p class="post-summary">I usually go with this tea for my morning shifts. It's good and reliable... giving me enough caffeine i need to power through the day. If you can find this in stores, you're golden. And as per usual, I just steeped it for as long as I liked, as it does best that way; enriches the flavor.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://itoen.com/products/oi-ocha-matcha-genmaicha"> Unsweetened Matcha Genmaicha Green Tea  (Ito En) (Cold)</a></h2>
-                    <h3>JAN 18 2025</h3>
-                    <h5>Rating: 6.4</h5>
-                    <p class="post-summary">I've had their bold green tea flavor before but never their genmaicha version. Honestly, this is pretty good and reminds me of the tea (as it should). No compliants here other than it not being well, hot tea.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: Black Tea  (Boston's Best)</h2>
-                    <h3>JAN 19 2025</h3>
-                    <h5>Rating: 5</h5>
-                    <p class="post-summary">It's really just the most generic black tea you can have. Nothing too fancy but nothing too bad. You can probably get this at most diners... but it's not something to look forward to. Kept it steeped in per usual, and I wouldn't change much about my process with this brand.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://twiningsusa.com/products/prince-of-wales">Prince of Wales (Twinings)</a></h2>
-                    <h3>JAN 20 2025</h3>
-                    <h5>Rating: 5.4</h5>
-                    <p class="post-summary">The water I heated up for the tea was too cold and quite honestly, I was too lazy to even bother getting hotter water. It was still somewhat enjoyable as it still had that mellow flavor I enjoy.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://twiningsusa.com/products/pure-rooibos"> Pure Roobios Red Tea (Twinings)</a></h2>
-                    <h3>JAN 22 2025</h3>
-                    <h5>Rating: 4.5</h5>
-                    <p class="post-summary">Not the best tea to drink in the morning. The strong smell really hits your nose and sours your mood slightly. And while it doesn't taste awful, it definitely is an acquired taste. Maybe I will come to like this unique tea over time.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://www.akbar.com/products/classic-earl-grey/">Earl Grey (Akbar)</a></h2>
-                    <h3>JAN 23 2025</h3>
-                    <h5>Rating: 6.1</h5>
-                    <p class="post-summary">Nothing special about this tea this time around. I just really enjoyed having a nice morning brew in my thermos. It hits just slightly better when you're slightly sleep deprived and hungry.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://twiningsusa.com/products/prince-of-wales"> The Prince of Wales (Twinings)</a> </h2>
-                    <h3>JAN 24 2025</h3>
-                    <h5>Rating: 7</h5>
-                    <p class="post-summary">PoW is always good, even when you're sleep deprived and need that nice mellow flavor. It never fails..</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: Coconut Oolong</h2>
-                    <h3>JAN 25 2025</h3>
-                    <h5>Rating: 6.8</h5>
-                    <p class="post-summary">I randomly saw this tea displayed at one of the coffee joints on campus and decided to try it out. It was pretty good despite being a <i>coconut</i> flavored oolong. And per usual, I just kept the bag in the hot water and savored the flavor as long as I could.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: Oolong Tea (Dynasty)</h2>
-                    <h3>JAN 26 2025</h3>
-                    <h5>Rating: 5.9</h5>
-                    <p class="post-summary">Same as last time. But, I drank it mid-day and it tasted better than usual. Obviously in my usual fashion, I kept it steeping for the strong flavor alone.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://makemineabuilders.com/product/80-pack/"> English Breakfast  Tea (Make Mine a Builders)</a></h2>
-                    <h3>JAN 27  2025</h3>
-                    <h5>Rating: 7</h5>
-                    <p class="post-summary">IAgain, great tea, not much else to say. I kept it steeping because like usual, it just tastes better that way. </p>
-                </div>
-                  <div class="sticky-note" onclick="expandPost(this)">
-                      <h2>Tea Review: <a href = "https://twiningsusa.com/products/prince-of-wales">Prince of Wales (Twinings)</a></h2>
-                    <h3>JAN 28 2025</h3>
-                    <h5>Rating: 7.2</h5>
-                    <p class="post-summary">Something about the PoW tasted better today. Even though my Yeti tumbler cap is stuck, I managed to get hot water and enjoy the tea in a normal paper cup. It tasted, better, slightly. Maybe it was the fact I had accidentally exposed the bag to the air for an hour or so before putting it into the hot water. Never the less, I might consider doing that method again to see if it tastes the same inside my tumbler (when I do somehow fix it).</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://twiningsusa.com/products/prince-of-wales">Prince of Wales (Twinings)</a></h2>
-                    <h3>JAN 29 2025</h3>
-                    <h5>Rating: 6.9</h5>
-                    <p class="post-summary">Got my tumbler fixed (managed to screw open the impossibly tight top), and brought my favorite tea into work. But, I never really got the chance to savor the tea, and was forced to drink it in a short time frame. While it was still pretty good, I didn't enjoy it like I did yesterday. I'm starting to see a pattern in the water temperature and the overall taste of the tea...</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: Oolong Tea (Dynasty)</h2>
-                    <h3>JAN 30 2025</h3>
-                    <h5>Rating: 5.5</h5>
-                    <p class="post-summary">Water was too hot this time, almost felt like the flavor was gone. It has <b>SOME</b> scent and taste, but was completely tasteless otherwise. I would rate it lower but I just like having warm tea in the morning to fuel me.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://www.akbar.com/products/classic-earl-grey/">Earl Grey (Akbar)</a></h2>
-                    <h3>JAN 31 2025</h3>
-                    <h5>Rating: 6.0</h5>
-                    <p class="post-summary">Again, it's just a good mellow tea to have in the morning. However, I think the flavor is getting kind of bland... I might consider getting another earl grey derivative down the line.</p>
-                </div>
-            </div>
-            <div class="month-divider">FEB 2025</div>
-             <div class="sticky-note-container">
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://twiningsusa.com/products/lady-grey">Lady Grey (Twinnings)</a></h2>
-                    <h3>FEB 01 2025</h3>
-                    <h5>Rating: 6.0</h5>
-                    <p class="post-summary">Bought this when it caught my eye in the store. I tried it immediately when I got home, and honestly it's o-k. It's better than the bland-ish oolong and it has some lemon-y hint to it. However, it does not taste remotely good when cold... so it would be better to use piping hot water for this tea. Per usual, I kept it steeped, and might just keep it steeped for the future unless the zesty flavor really begins to bug me.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://makemineabuilders.com/product/80-pack/"> English Breakfast  Tea (Make Mine a Builders)</a></h2>
-                    <h3>FEB 02 2025</h3>
-                    <h5>Rating: 6.0</h5>
-                    <p class="post-summary">I had this tea at a very odd hour: towards the evening. Rather than having my tea when I woke up, I had to do a few chores before I could wind down with one of my favor brands of tea. And since I didn't use my thermos for this, it got a cold taste to it relatively quickly, but it didn't ruin the bold flavor it had to offer.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://twiningsusa.com/products/lady-grey">Lady Grey (Twinnings)</a></h2>
-                    <h3>FEB 03 2025</h3>
-                    <h5>Rating: 6.2</h5>
-                    <p class="post-summary">Tried it again at work with a thermos and much hotter water. The flavor improved just a little bit but I'm not sure if I'll be having it every single day. Maybe the zesty flavor is what is turning me away from it. Maybe not steeping it for as long as I do will fix ths issue.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: Oolong Tea (Dynasty</h2>
-                    <h3>FEB 04 2025</h3>
-                    <h5>Rating: 5.8</h5>
-                    <p class="post-summary">Just a random tea I chose out of all the options I had. Used piping hot water to brew it, and kept it in. Nothing special, just something I wanted to have to keep me warm during this frigid season.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://www.harney.com/products/japanese-sencha"> Japanese Sencha (Harvey and Sons)</a></h2>
-                    <h3>FEB 05 2025</h3>
-                    <h5>Rating: 6.4</h5>
-                    <p class="post-summary">Yesterday, I got the urge to buy myself more tea as I wasn't content with the flavors I bought before (Lady Grey). While this green tea wasn't as good as the brown rice green tea, it still had the unique kick I usually get in these "specialized" green teas. Per usual, I used piping hot water to steep it, and kept it in there until I finished. What I found funny was that there was a little label on the bottom that said green tea needed to be brewed for a specific time to be good. Honestly, I find it funny there's a serious debate on what are the appropriate brewing times (i.e. some apps say 3 minutes and others might say 3:30), while I just keep it steeping for the maximum flavor potential.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: Brown Rice Green Tea (SanGrime</h2>
-                    <h3>FEB 06 2025</h3>
-                    <h5>Rating: 8</h5>
-                    <p class="post-summary">Had this tea again today for work. Tasted great as per usual for the roasted brown rice; but honestly it deserved a higher rating because of how tired I was and just craved something with flavor... which this is good for. Again, great tea, and I would suggest buying it if you ever come across something like it, Japanese or Korean.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://www.harney.com/products/japanese-sencha"> Japanese Sencha (Harvey and Sons)</a></h2>
-                    <h3>FEB 08 2025</h3>
-                    <h5>Rating: 6.7</h5>
-                    <p class="post-summary">Had this tea twice in a day. First as my shift drink and then a smaller cup in my room. The first time, I used really hot water and kept it steeping until I finished it. However, the second time I tried to steep it for 3 minutes, and I didn't enjoy it... so I put the bag in. I guess the little bit on the bottom of the box was wrong... (the steeping time should be 1-3 minutes, apparently...). Perhaps I just like strong tea more than anything else (unless it has a citron in its midst... then hot tea with that tastes too strong).</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://yamamotoyama.com/products/genmaicha-green-tea-bag-value-pack"> Genmaicha (Yamamoto Yama))</a></h2>
-                    <h3>FEB 08 2025</h3>
-                    <h5>Rating: 6.8</h5>
-                    <p class="post-summary">Similar to the Genmaicha I have tried before, this tea felt a little bit less, rice-y, and more green-ish. While there's nothing entirely wrong with that, I was really craving that proper brown rice taste, but not much came from it. While I am somewhat disapppointed, I don't entirely hate this tea. It still has that earthy flavor I enjoy and plan to have more often than the other green tea I bought earlier. And as per usual, I have brewed this tea as long as I could and enjoyed it hot.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://www.harney.com/products/japanese-sencha"> Japanese Sencha (Harvey and Sons)</a></h2>
-                    <h3>FEB 09 2025</h3>
-                    <h5>Rating: 6.9</h5>
-                    <p class="post-summary">Had this again as a complement to my new brown rice tea. Great morning brew, per usual. I didn't bother following the instructions as per usual, and kept it brewing until I finished the cup.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Tea Review: <a href = "https://www.republicoftea.com/ginger-peach-white-tea/p/v00744/">Ginger Peach White Tea (Republic of Tea)</a></h2>
-                    <h3>FEB 15-16 2025</h3>
-                    <h5>Rating: 6.4</h5>
-                    <p class="post-summary">Had this again as a complement to my new brown rice tea. Great morning brew, per usual. I didn't bother following the instructions as per usual, and kept it brewing until I finished the cup.</p>
-                </div>
-                <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Small note</h2>
-                    <p class="post-summary">I found it very redundant to keep repeating the same things every time. For that reason, I've stopped the tea reviews, until I got new tea that is.</p>
-                </div>
-            </div>
-            <div class="month-divider">MARCH  2025</div>
+            </header>
+            <div class="container">
                 <div class="sticky-note-container">
-            </div>
-             <div class="month-divider">APRIL  2025</div>
-                <div class="sticky-note-container">
-            </div>
-             <div class="month-divider">MAY  2025</div>
-                <div class="sticky-note-container">
-            </div>
-             <div class="month-divider">JUNE  2025</div>
-                <div class="sticky-note-container">
-                    <div class="sticky-note" onclick="expandPost(this)">
-                    <h2>Apologies</h2>
-                    <p class="post-summary">Due to school and many other events happening in my life, I have not been able to update this website as often as I would've hoped for. For now, I will only update when it feels relevant...</p>
+                     <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>What is this?</h2>
+                                <p class="post-summary">
+                                    This is just random tea documentation notes. I'm really into tea so all I do is
+                                    write about the tea I've had that day and figure out which is the best way to brew
+                                    it. I also review the tea sometimes (on a scale from 0-10), and determine if certain
+                                    brewing times are "better" than others. Sometimes, I might neglect to care, and
+                                    others I won't, it's entirely dependent on how I feel. And as something extra, I
+                                    will include links to the websites that host the teas I have.
+                                </p>
+                            </div>
+                </div>
+                <div class="year-dropdown">
+                    <div class="year-divider clickable">2025</div>
+                    <div class="year-content">
+                        <div class="month-divider">JAN 2025</div>
+                        <div class="sticky-note-container">
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://twiningsusa.com/products/prince-of-wales">
+                                        The Prince of Wales (Twinings)</a
+                                    >
+                                </h2>
+                                <h3>JAN 09 2025</h3>
+                                <h5>Rating: 7</h5>
+                                <p class="post-summary">
+                                    Had the PoW today. I kept steeping it, didn't bother to take it out. I prefer things
+                                    bitter, but I can remove it at the 3-minute mark next time.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://www.stashtea.com/products/jasmine-blossom-green-tea-bagged">
+                                        Jasmine Tea (STASH)
+                                    </a>
+                                </h2>
+                                <h3>JAN 10 2025</h3>
+                                <h5>Rating: 5</h5>
+                                <p class="post-summary">
+                                    Tried the Jasmine Tea at some Thai fusion joint. I wasn't familiar with the brand
+                                    but seeing their website, they seem to know what they're doing. Personally, I think
+                                    there was something missing, but then again I have a strong preference for green tea
+                                    w/ roasted brown rices, so that might just be that. Again, I just let it steep as I
+                                    usually do, so I didn't know if there was a specific timer for it.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://twiningsusa.com/products/prince-of-wales">
+                                        The Prince of Wales (Twinings)
+                                    </a>
+                                </h2>
+                                <h3>JAN 10 2025</h3>
+                                <h5>Rating: 5</h5>
+                                <p class="post-summary">
+                                    Had the PoW again. And like the last blog about the POW, I decided to steep it in
+                                    for 3 minutes. It didn't have much flavor, so I only drank it for a few sips and put
+                                    the bag back in. Tasted much better after I left it in there for a long time.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://itoen.com/products/oi-ocha-genmai-tea-bags">
+                                        Matcha Genmaicha Tea (Ito En)
+                                    </a>
+                                </h2>
+                                <h3>JAN 11 2025</h3>
+                                <h5>Rating: 8</h5>
+                                <p class="post-summary">
+                                    Had my favorite type of tea today. Nice mellow taste and I enjoy it overall. But
+                                    since I was so busy coding this site, I completely forgot I had it... so it's now
+                                    cold as I type this. But before it was cold, I made sure to enjoy more than a few
+                                    sips. And like usual, I just kept the bag in there like they usually do at Japanese
+                                    restuarants.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>Tea Review: Green Tea (Lipton)</h2>
+                                <h3>JAN 11 2025</h3>
+                                <h5>Rating: 4</h5>
+                                <p class="post-summary">
+                                    Going to a Korean BBQ restaraunt, I had high expectations for tea, but I was
+                                    semi-disappointed when I got generic green tea... the ones you see at hotels. I
+                                    don't necessarily hate Lipton, but it's not my, cup of tea. Since I don't usually
+                                    have Lipton, I don't really care to footnote the steeping time.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://shop.wegmans.com/product/42807"> Oolong Tea (Wegmans) </a>
+                                </h2>
+                                <h3>JAN 12 2025</h3>
+                                <h5>Rating: 5</h5>
+                                <p class="post-summary">
+                                    I have a serious bias towards oolong tea, but honestly the cheap kind isn't all that
+                                    good. I've been having this Wegman's branded Oolong for a bit and honestly it's not
+                                    bad bad, but not the best oolong I've had. I kept it steeped in, but since I ran out
+                                    of this specific tea, I will have to hold on steeping it for however long I choose
+                                    to steep it for. Otherwise, I'm not sure if I'll be able to have tea tomorrow since
+                                    school is resuming, but I will try and have black tea for my morning drink during
+                                    work.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://www.akbar.com/products/classic-earl-grey/">Earl Grey (Akbar)</a>
+                                </h2>
+                                <h3>JAN 13 2025</h3>
+                                <h5>Rating: 6</h5>
+                                <p class="post-summary">
+                                    As promised the day before, I'd make sure to have a cup of tea, or something in that
+                                    nature. I had brought a ton of these back from home and decided to brew them at work
+                                    inside of my thermos container. Because I didn't want to waste too much time, I
+                                    didn't time the brewing or whatever, I just put the bag in and let it sit. As I type
+                                    this, my cup is still filled with pipping hot tea water, and I can't wait to have it
+                                    throughout the day.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>Tea Review: Brown Rice Green Tea (SanGrime)</h2>
+                                <h3>JAN 14 2025</h3>
+                                <h5>Rating: 7</h5>
+                                <p class="post-summary">
+                                    Bought this months back and I've had it multiple times. But since my time was
+                                    crunched, I haven't had the chance to actually have the tea yet, until now. Before,
+                                    I've always made sure that I got pipping hot water in my thermos and drank it,
+                                    because I found the rice teas did better just by sitting in the cup. So, obviously a
+                                    good experience and is usually better than genmaicha tea, this tea's Japanese
+                                    counterpart. Would recommend.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>Tea Review: Oolong Tea (Dynasty)</h2>
+                                <h3>JAN 15 2025</h3>
+                                <h5>Rating: 5.8</h5>
+                                <p class="post-summary">
+                                    Had some Oolong tea the other day from a company I just happened to find in the
+                                    store. The tea's, okay. And as per usual, I just steep it in the hot water I get
+                                    from work. There's nothing too special about it, but it's better than the tea from
+                                    Wegmans. Would recommend if you happen to find it in-store and or online. I cannot
+                                    find the company's website so your best bet is on Amazon or another online shop not
+                                    related to them.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://shop.wegmans.com/product/40092/wegmans-just-tea-black"
+                                        >Black Tea (Wegmans)</a
+                                    >
+                                </h2>
+                                <h3>JAN 16 2025</h3>
+                                <h5>Rating: 5.5</h5>
+                                <p class="post-summary">
+                                    Honestly not the best black tea I've had but it's very refreshing. If you steep it
+                                    for a very long time, it's super refreshing but it just doesn't have the flavor
+                                    palette I like. If you want cheap and okay-ish black tea, this stuff's good.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://makemineabuilders.com/product/80-pack/">
+                                        English Breakfast Tea (Make Mine a Builders)</a
+                                    >
+                                </h2>
+                                <h3>JAN 17 2025</h3>
+                                <h5>Rating: 7</h5>
+                                <p class="post-summary">
+                                    I usually go with this tea for my morning shifts. It's good and reliable... giving
+                                    me enough caffeine i need to power through the day. If you can find this in stores,
+                                    you're golden. And as per usual, I just steeped it for as long as I liked, as it
+                                    does best that way; enriches the flavor.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://itoen.com/products/oi-ocha-matcha-genmaicha">
+                                        Unsweetened Matcha Genmaicha Green Tea (Ito En) (Cold)</a
+                                    >
+                                </h2>
+                                <h3>JAN 18 2025</h3>
+                                <h5>Rating: 6.4</h5>
+                                <p class="post-summary">
+                                    I've had their bold green tea flavor before but never their genmaicha version.
+                                    Honestly, this is pretty good and reminds me of the tea (as it should). No
+                                    compliants here other than it not being well, hot tea.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>Tea Review: Black Tea (Boston's Best)</h2>
+                                <h3>JAN 19 2025</h3>
+                                <h5>Rating: 5</h5>
+                                <p class="post-summary">
+                                    It's really just the most generic black tea you can have. Nothing too fancy but
+                                    nothing too bad. You can probably get this at most diners... but it's not something
+                                    to look forward to. Kept it steeped in per usual, and I wouldn't change much about
+                                    my process with this brand.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://twiningsusa.com/products/prince-of-wales"
+                                        >Prince of Wales (Twinings)</a
+                                    >
+                                </h2>
+                                <h3>JAN 20 2025</h3>
+                                <h5>Rating: 5.4</h5>
+                                <p class="post-summary">
+                                    The water I heated up for the tea was too cold and quite honestly, I was too lazy to
+                                    even bother getting hotter water. It was still somewhat enjoyable as it still had
+                                    that mellow flavor I enjoy.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://twiningsusa.com/products/pure-rooibos">
+                                        Pure Roobios Red Tea (Twinings)</a
+                                    >
+                                </h2>
+                                <h3>JAN 22 2025</h3>
+                                <h5>Rating: 4.5</h5>
+                                <p class="post-summary">
+                                    Not the best tea to drink in the morning. The strong smell really hits your nose and
+                                    sours your mood slightly. And while it doesn't taste awful, it definitely is an
+                                    acquired taste. Maybe I will come to like this unique tea over time.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://www.akbar.com/products/classic-earl-grey/">Earl Grey (Akbar)</a>
+                                </h2>
+                                <h3>JAN 23 2025</h3>
+                                <h5>Rating: 6.1</h5>
+                                <p class="post-summary">
+                                    Nothing special about this tea this time around. I just really enjoyed having a nice
+                                    morning brew in my thermos. It hits just slightly better when you're slightly sleep
+                                    deprived and hungry.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://twiningsusa.com/products/prince-of-wales">
+                                        The Prince of Wales (Twinings)</a
+                                    >
+                                </h2>
+                                <h3>JAN 24 2025</h3>
+                                <h5>Rating: 7</h5>
+                                <p class="post-summary">
+                                    PoW is always good, even when you're sleep deprived and need that nice mellow
+                                    flavor. It never fails..
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>Tea Review: Coconut Oolong</h2>
+                                <h3>JAN 25 2025</h3>
+                                <h5>Rating: 6.8</h5>
+                                <p class="post-summary">
+                                    I randomly saw this tea displayed at one of the coffee joints on campus and decided
+                                    to try it out. It was pretty good despite being a <i>coconut</i> flavored oolong.
+                                    And per usual, I just kept the bag in the hot water and savored the flavor as long
+                                    as I could.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>Tea Review: Oolong Tea (Dynasty)</h2>
+                                <h3>JAN 26 2025</h3>
+                                <h5>Rating: 5.9</h5>
+                                <p class="post-summary">
+                                    Same as last time. But, I drank it mid-day and it tasted better than usual.
+                                    Obviously in my usual fashion, I kept it steeping for the strong flavor alone.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://makemineabuilders.com/product/80-pack/">
+                                        English Breakfast Tea (Make Mine a Builders)</a
+                                    >
+                                </h2>
+                                <h3>JAN 27 2025</h3>
+                                <h5>Rating: 7</h5>
+                                <p class="post-summary">
+                                    IAgain, great tea, not much else to say. I kept it steeping because like usual, it
+                                    just tastes better that way.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://twiningsusa.com/products/prince-of-wales"
+                                        >Prince of Wales (Twinings)</a
+                                    >
+                                </h2>
+                                <h3>JAN 28 2025</h3>
+                                <h5>Rating: 7.2</h5>
+                                <p class="post-summary">
+                                    Something about the PoW tasted better today. Even though my Yeti tumbler cap is
+                                    stuck, I managed to get hot water and enjoy the tea in a normal paper cup. It
+                                    tasted, better, slightly. Maybe it was the fact I had accidentally exposed the bag
+                                    to the air for an hour or so before putting it into the hot water. Never the less, I
+                                    might consider doing that method again to see if it tastes the same inside my
+                                    tumbler (when I do somehow fix it).
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://twiningsusa.com/products/prince-of-wales"
+                                        >Prince of Wales (Twinings)</a
+                                    >
+                                </h2>
+                                <h3>JAN 29 2025</h3>
+                                <h5>Rating: 6.9</h5>
+                                <p class="post-summary">
+                                    Got my tumbler fixed (managed to screw open the impossibly tight top), and brought
+                                    my favorite tea into work. But, I never really got the chance to savor the tea, and
+                                    was forced to drink it in a short time frame. While it was still pretty good, I
+                                    didn't enjoy it like I did yesterday. I'm starting to see a pattern in the water
+                                    temperature and the overall taste of the tea...
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>Tea Review: Oolong Tea (Dynasty)</h2>
+                                <h3>JAN 30 2025</h3>
+                                <h5>Rating: 5.5</h5>
+                                <p class="post-summary">
+                                    Water was too hot this time, almost felt like the flavor was gone. It has
+                                    <b>SOME</b> scent and taste, but was completely tasteless otherwise. I would rate it
+                                    lower but I just like having warm tea in the morning to fuel me.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://www.akbar.com/products/classic-earl-grey/">Earl Grey (Akbar)</a>
+                                </h2>
+                                <h3>JAN 31 2025</h3>
+                                <h5>Rating: 6.0</h5>
+                                <p class="post-summary">
+                                    Again, it's just a good mellow tea to have in the morning. However, I think the
+                                    flavor is getting kind of bland... I might consider getting another earl grey
+                                    derivative down the line.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="month-divider">FEB 2025</div>
+                        <div class="sticky-note-container">
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://twiningsusa.com/products/lady-grey">Lady Grey (Twinnings)</a>
+                                </h2>
+                                <h3>FEB 01 2025</h3>
+                                <h5>Rating: 6.0</h5>
+                                <p class="post-summary">
+                                    Bought this when it caught my eye in the store. I tried it immediately when I got
+                                    home, and honestly it's o-k. It's better than the bland-ish oolong and it has some
+                                    lemon-y hint to it. However, it does not taste remotely good when cold... so it
+                                    would be better to use piping hot water for this tea. Per usual, I kept it steeped,
+                                    and might just keep it steeped for the future unless the zesty flavor really begins
+                                    to bug me.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://makemineabuilders.com/product/80-pack/">
+                                        English Breakfast Tea (Make Mine a Builders)</a
+                                    >
+                                </h2>
+                                <h3>FEB 02 2025</h3>
+                                <h5>Rating: 6.0</h5>
+                                <p class="post-summary">
+                                    I had this tea at a very odd hour: towards the evening. Rather than having my tea
+                                    when I woke up, I had to do a few chores before I could wind down with one of my
+                                    favor brands of tea. And since I didn't use my thermos for this, it got a cold taste
+                                    to it relatively quickly, but it didn't ruin the bold flavor it had to offer.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://twiningsusa.com/products/lady-grey">Lady Grey (Twinnings)</a>
+                                </h2>
+                                <h3>FEB 03 2025</h3>
+                                <h5>Rating: 6.2</h5>
+                                <p class="post-summary">
+                                    Tried it again at work with a thermos and much hotter water. The flavor improved
+                                    just a little bit but I'm not sure if I'll be having it every single day. Maybe the
+                                    zesty flavor is what is turning me away from it. Maybe not steeping it for as long
+                                    as I do will fix ths issue.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>Tea Review: Oolong Tea (Dynasty</h2>
+                                <h3>FEB 04 2025</h3>
+                                <h5>Rating: 5.8</h5>
+                                <p class="post-summary">
+                                    Just a random tea I chose out of all the options I had. Used piping hot water to
+                                    brew it, and kept it in. Nothing special, just something I wanted to have to keep me
+                                    warm during this frigid season.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://www.harney.com/products/japanese-sencha">
+                                        Japanese Sencha (Harvey and Sons)</a
+                                    >
+                                </h2>
+                                <h3>FEB 05 2025</h3>
+                                <h5>Rating: 6.4</h5>
+                                <p class="post-summary">
+                                    Yesterday, I got the urge to buy myself more tea as I wasn't content with the
+                                    flavors I bought before (Lady Grey). While this green tea wasn't as good as the
+                                    brown rice green tea, it still had the unique kick I usually get in these
+                                    "specialized" green teas. Per usual, I used piping hot water to steep it, and kept
+                                    it in there until I finished. What I found funny was that there was a little label
+                                    on the bottom that said green tea needed to be brewed for a specific time to be
+                                    good. Honestly, I find it funny there's a serious debate on what are the appropriate
+                                    brewing times (i.e. some apps say 3 minutes and others might say 3:30), while I just
+                                    keep it steeping for the maximum flavor potential.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>Tea Review: Brown Rice Green Tea (SanGrime</h2>
+                                <h3>FEB 06 2025</h3>
+                                <h5>Rating: 8</h5>
+                                <p class="post-summary">
+                                    Had this tea again today for work. Tasted great as per usual for the roasted brown
+                                    rice; but honestly it deserved a higher rating because of how tired I was and just
+                                    craved something with flavor... which this is good for. Again, great tea, and I
+                                    would suggest buying it if you ever come across something like it, Japanese or
+                                    Korean.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://www.harney.com/products/japanese-sencha">
+                                        Japanese Sencha (Harvey and Sons)</a
+                                    >
+                                </h2>
+                                <h3>FEB 08 2025</h3>
+                                <h5>Rating: 6.7</h5>
+                                <p class="post-summary">
+                                    Had this tea twice in a day. First as my shift drink and then a smaller cup in my
+                                    room. The first time, I used really hot water and kept it steeping until I finished
+                                    it. However, the second time I tried to steep it for 3 minutes, and I didn't enjoy
+                                    it... so I put the bag in. I guess the little bit on the bottom of the box was
+                                    wrong... (the steeping time should be 1-3 minutes, apparently...). Perhaps I just
+                                    like strong tea more than anything else (unless it has a citron in its midst... then
+                                    hot tea with that tastes too strong).
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://yamamotoyama.com/products/genmaicha-green-tea-bag-value-pack">
+                                        Genmaicha (Yamamoto Yama))</a
+                                    >
+                                </h2>
+                                <h3>FEB 08 2025</h3>
+                                <h5>Rating: 6.8</h5>
+                                <p class="post-summary">
+                                    Similar to the Genmaicha I have tried before, this tea felt a little bit less,
+                                    rice-y, and more green-ish. While there's nothing entirely wrong with that, I was
+                                    really craving that proper brown rice taste, but not much came from it. While I am
+                                    somewhat disapppointed, I don't entirely hate this tea. It still has that earthy
+                                    flavor I enjoy and plan to have more often than the other green tea I bought
+                                    earlier. And as per usual, I have brewed this tea as long as I could and enjoyed it
+                                    hot.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://www.harney.com/products/japanese-sencha">
+                                        Japanese Sencha (Harvey and Sons)</a
+                                    >
+                                </h2>
+                                <h3>FEB 09 2025</h3>
+                                <h5>Rating: 6.9</h5>
+                                <p class="post-summary">
+                                    Had this again as a complement to my new brown rice tea. Great morning brew, per
+                                    usual. I didn't bother following the instructions as per usual, and kept it brewing
+                                    until I finished the cup.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>
+                                    Tea Review:
+                                    <a href="https://www.republicoftea.com/ginger-peach-white-tea/p/v00744/"
+                                        >Ginger Peach White Tea (Republic of Tea)</a
+                                    >
+                                </h2>
+                                <h3>FEB 15-16 2025</h3>
+                                <h5>Rating: 6.4</h5>
+                                <p class="post-summary">
+                                    Had this again as a complement to my new brown rice tea. Great morning brew, per
+                                    usual. I didn't bother following the instructions as per usual, and kept it brewing
+                                    until I finished the cup.
+                                </p>
+                            </div>
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>Small note</h2>
+                                <p class="post-summary">
+                                    I found it very redundant to keep repeating the same things every time. For that
+                                    reason, I've stopped the tea reviews, until I got new tea that is.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="month-divider">MARCH 2025</div>
+                        <div class="sticky-note-container"></div>
+                        <div class="month-divider">APRIL 2025</div>
+                        <div class="sticky-note-container"></div>
+                        <div class="month-divider">MAY 2025</div>
+                        <div class="sticky-note-container"></div>
+                        <div class="month-divider">JUNE 2025</div>
+                        <div class="sticky-note-container">
+                            <div class="sticky-note" onclick="expandPost(this)">
+                                <h2>Apologies</h2>
+                                <p class="post-summary">
+                                    Due to school and many other events happening in my life, I have not been able to
+                                    update this website as often as I would've hoped for. For now, I will only update
+                                    when it feels relevant...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
-</body>
+        </main>
+    </body>
 </html>

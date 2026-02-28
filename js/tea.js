@@ -1,20 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
     const notes = document.querySelectorAll(".sticky-note");
     const dividers = document.querySelectorAll(".month-divider"); //select month dividers
+    const yearDividers = document.querySelectorAll(".year-divider");
+    const monthDividers = document.querySelectorAll(".month-divider");
 
     //expand and collapse sticky notes...
     function expandPost(note) {
         if (note.classList.contains("expanded")) {
             note.classList.remove("expanded");
         } else {
-            notes.forEach(item => item.classList.remove("expanded"));
+            notes.forEach((item) => item.classList.remove("expanded"));
             note.classList.add("expanded");
         }
     }
 
+    //expand the months and years
+    yearDividers.forEach((divider) => {
+        divider.addEventListener("click", () => {
+            divider.parentElement.classList.toggle("open");
+        });
+    });
+
+    monthDividers.forEach((divider) => {
+        divider.addEventListener("click", () => {
+            divider.parentElement.classList.toggle("open");
+        });
+    });
+
     //scroll reveal animation
     function revealOnScroll() {
-        [...notes, ...dividers].forEach(element => { //loop through both sets to apply the reveal animation
+        [...notes, ...dividers].forEach((element) => {
+            //loop through both sets to apply the reveal animation
             const rect = element.getBoundingClientRect();
             if (rect.top < window.innerHeight - 100 && rect.bottom > 0) {
                 element.style.opacity = 1;
@@ -27,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //re-apply styles to the notes and dividers; add the click event again to the sticky notes
-    notes.forEach(note => {
+    notes.forEach((note) => {
         note.style.opacity = 0;
         note.style.transform = "translateY(20px)";
         note.style.transition = "opacity 1.8s ease, transform 1.8s ease";
@@ -37,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    dividers.forEach(divider => {
+    dividers.forEach((divider) => {
         divider.style.opacity = 0;
         divider.style.transform = "translateY(20px)";
         divider.style.transition = "opacity 1.8s ease, transform 1.8s ease";
